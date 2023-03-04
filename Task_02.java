@@ -1,5 +1,5 @@
 //Вывести все простые числа от 1 до 1000
-package HW_03_03_23;
+package Java_HW_03_03_23;
 
 public class Task_02 {
     boolean is_simple(int n) {
