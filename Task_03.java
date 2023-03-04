@@ -3,7 +3,7 @@
 // Ввод знака ->
 // Ввод числа ->
 
-package HW_03_03_23;
+package Java_HW_03_03_23;
 
 import java.util.Scanner;
 
