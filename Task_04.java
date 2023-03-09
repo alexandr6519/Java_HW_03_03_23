@@ -9,7 +9,7 @@ package Java_HW_03_03_23;
 import java.util.Scanner;
 
 public class Task_04 {
-    static boolean is_equal(String q, String w, String e) {
+    static boolean isRightEquation(String q, String w, String e) {
         int a = Integer.parseInt(q);
         int b = Integer.parseInt(w);
         int c = Integer.parseInt(e);
@@ -48,7 +48,7 @@ public class Task_04 {
                     //System.out.println(temp_array[i]);
                 }
 
-                if (Task_04.is_equal(temp_array[0], temp_array[1], temp_array[2])) {
+                if (isRightEquation(temp_array[0], temp_array[1], temp_array[2])) {
                     System.out.printf("%s + %s = %s", temp_array[0], temp_array[1], temp_array[2]);
                     is_solution = true;
                     break;
