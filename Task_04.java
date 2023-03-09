@@ -24,37 +24,36 @@ public class Task_04 {
         System.out.printf("Enter equition as (q + w = e): ");
         String equation = scn.nextLine();
         equation = equation.replace(" ", "");
-        String[] numbers_array = equation.split("[+=]");
-        boolean is_correct_input = true;
+        String[] numbersArray = equation.split("[+=]");
+        boolean isCorrectInput = true;
 
-        for (String element : numbers_array) {
+        for (String element : numbersArray) {
             element = element.replace("?", "0");
             int number = Integer.parseInt(element);
             if (number < 0) {
-                is_correct_input = false;
+                isCorrectInput = false;
                 break;
             }           
         }
 
-        if (!is_correct_input || numbers_array.length != 3) {
+        if (!isCorrectInput || numbersArray.length != 3) {
             System.out.println("You enter wrong equation!!!");
         } else {
-            boolean is_solution = false;
+            boolean isSolution = false;
             for (int x = 0; x < 10; x++) {
-                String[] temp_array = numbers_array.clone();
+                String[] tempArray = numbersArray.clone();
                 for (int i = 0; i < 3; i++) {
                     String c = Integer.toString(x);
-                    temp_array[i] = temp_array[i].replace("?", c);
-                    //System.out.println(temp_array[i]);
+                    tempArray[i] = tempArray[i].replace("?", c);
                 }
 
-                if (isRightEquation(temp_array[0], temp_array[1], temp_array[2])) {
-                    System.out.printf("%s + %s = %s", temp_array[0], temp_array[1], temp_array[2]);
-                    is_solution = true;
+                if (isRightEquation(tempArray[0], tempArray[1], tempArray[2])) {
+                    System.out.printf("%s + %s = %s", tempArray[0], tempArray[1], tempArray[2]);
+                    isSolution = true;
                     break;
                 }                
             }
-            if (! is_solution) {
+            if (! isSolution) {
                System.out.println("Solution of equation is absent!!!"); 
             } 
         }
