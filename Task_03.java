@@ -8,23 +8,23 @@ package Java_HW_03_03_23;
 import java.util.Scanner;
 
 public class Task_03 {
-    static int get_sum(int a, int b) {
+    static int getSum(int a, int b) {
         return a + b;
     }
 
-    static int get_subtraction(int a, int b) {
+    static int getSubtraction(int a, int b) {
         return a - b;
     }
 
-    static int get_product(int a, int b) {
+    static int getProduct(int a, int b) {
         return a * b;
     }
 
-    static double get_division(int a, int b) {
+    static double getDivision(int a, int b) {
         return (double) a / (double) b;
     }
 
-    static void print_result_of_operation(int a, int b, String sign_operation) {
+    static void printResultOfOperation(int a, int b, String sign_operation) {
         switch (sign_operation) {
         case "+":
             System.out.printf("%d %s %d = %d \n", a, sign_operation, b, get_sum(a, b));
@@ -67,7 +67,7 @@ public class Task_03 {
                     System.out.println("You entered wrong number!!!");
                 } else {
                     b = scn.nextInt();
-                    Task_03.print_result_of_operation(a, b, sign_operation);
+                    printResultOfOperation(a, b, sign_operation);
                 }
             } else {
                 System.out.println("You entered wrong operation!!!");
