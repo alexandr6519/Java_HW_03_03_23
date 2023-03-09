@@ -7,7 +7,7 @@ package Java_HW_03_03_23;
 import java.util.Scanner;
 
 class Task_01 {
-    static int get_triangle_number(int n) {
+    static int getTriangleNumber(int n) {
         int sum = 0;
         for (int index = 0; index < n; index++) {
             sum += index + 1;
@@ -15,7 +15,7 @@ class Task_01 {
         return sum;
     }
 
-    static int get_factorial(int n) {
+    static int getFactorial(int n) {
         int result = 1;
         for (int index = 0; index < n; index++) {
             result *= index + 1;
@@ -34,9 +34,9 @@ class Task_01 {
             if (n < 1)
                 System.out.println("You should enter positive number only!!!");
             else {
-                System.out.printf("The triangle number of %d is: %s! ", n, get_triangle_number(n));
+                System.out.printf("The triangle number of %d is: %s! ", n, getTriangleNumber(n));
                 System.out.println();
-                System.out.printf("The factorial of %d is: %s! ", n, get_factorial(n));
+                System.out.printf("The factorial of %d is: %s! ", n, getFactorial(n));
             }
         }
         scn.close();
