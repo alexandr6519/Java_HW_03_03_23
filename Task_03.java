@@ -27,17 +27,17 @@ public class Task_03 {
     static void printResultOfOperation(int a, int b, String sign_operation) {
         switch (sign_operation) {
         case "+":
-            System.out.printf("%d %s %d = %d \n", a, sign_operation, b, get_sum(a, b));
+            System.out.printf("%d %s %d = %d \n", a, sign_operation, b, getSum(a, b));
             break;
         case "-":
-            System.out.printf("%d %s %d = %d \n", a, sign_operation, b, get_subtraction(a, b));
+            System.out.printf("%d %s %d = %d \n", a, sign_operation, b, getSubtraction(a, b));
             break;
         case "*":
-            System.out.printf("%d %s %d = %d \n", a, sign_operation, b, get_product(a, b));
+            System.out.printf("%d %s %d = %d \n", a, sign_operation, b, getProduct(a, b));
             break;
         case "/":
             if (b != 0) {
-                System.out.printf("%d %s %d = %.4333f \n", a, sign_operation, b, get_division(a, b));
+                System.out.printf("%d %s %d = %.4f \n", a, sign_operation, b, getDivision(a, b));
             } else {
                 System.out.println("ERROR: division by zero!!!");
             }
