@@ -34,9 +34,9 @@ class Task_01 {
             if (n < 1)
                 System.out.println("You should enter positive number only!!!");
             else {
-                System.out.printf("The triangle number of %d is: %s! ", n, Task_01.get_triangle_number(n));
+                System.out.printf("The triangle number of %d is: %s! ", n, get_triangle_number(n));
                 System.out.println();
-                System.out.printf("The factorial of %d is: %s! ", n, Task_01.get_factorial(n));
+                System.out.printf("The factorial of %d is: %s! ", n, get_factorial(n));
             }
         }
         scn.close();
