@@ -24,20 +24,20 @@ public class Task_03 {
         return (double) a / (double) b;
     }
 
-    static void printResultOfOperation(int a, int b, String sign_operation) {
+    static void printResultOfOperation(int a, int b, String signOperation) {
         switch (sign_operation) {
         case "+":
-            System.out.printf("%d %s %d = %d \n", a, sign_operation, b, getSum(a, b));
+            System.out.printf("%d %s %d = %d \n", a, signOperation, b, getSum(a, b));
             break;
         case "-":
-            System.out.printf("%d %s %d = %d \n", a, sign_operation, b, getSubtraction(a, b));
+            System.out.printf("%d %s %d = %d \n", a, signOperation, b, getSubtraction(a, b));
             break;
         case "*":
-            System.out.printf("%d %s %d = %d \n", a, sign_operation, b, getProduct(a, b));
+            System.out.printf("%d %s %d = %d \n", a, signOperation, b, getProduct(a, b));
             break;
         case "/":
             if (b != 0) {
-                System.out.printf("%d %s %d = %.4f \n", a, sign_operation, b, getDivision(a, b));
+                System.out.printf("%d %s %d = %.4f \n", a, signOperation, b, getDivision(a, b));
             } else {
                 System.out.println("ERROR: division by zero!!!");
             }
@@ -55,19 +55,19 @@ public class Task_03 {
             a = scn.nextInt();
             Scanner sc = new Scanner(System.in);
             System.out.printf("Enter sign of operation from list: +, -, *, / \n");
-            String sign_operation = "";
+            String signOperation = "";
             if (sc.hasNextLine()) {
-                sign_operation = sc.nextLine();
+                signOperation = sc.nextLine();
             }
-            if (sign_operation.equals("+") || sign_operation.equals("-") || sign_operation.equals("*")
-                    || sign_operation.equals("/")) {
+            if (signOperation.equals("+") || signOperation.equals("-") || signOperation.equals("*")
+                    || signOperation.equals("/")) {
                 int b = 0;
                 System.out.printf("Enter second number: ");
                 if (!scn.hasNextInt()) {
                     System.out.println("You entered wrong number!!!");
                 } else {
                     b = scn.nextInt();
-                    printResultOfOperation(a, b, sign_operation);
+                    printResultOfOperation(a, b, signOperation);
                 }
             } else {
                 System.out.println("You entered wrong operation!!!");
